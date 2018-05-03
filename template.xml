@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="recompute_price_start_view_form">
+            <field name="model">product.recompute_price.start</field>
+            <field name="type">form</field>
+            <field name="name">recompute_price_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wizard_recompute_price">
+            <field name="name">Recompute Price</field>
+            <field name="wiz_name">product.recompute_price</field>
+            <field name="model">product.template</field>
+        </record>
+        <record model="ir.action.keyword" id="act_wizard_recompute_price_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">product.template,-1</field>
+            <field name="action" ref="wizard_recompute_price"/>
+        </record>
+
+    </data>
+</tryton>
